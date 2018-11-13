@@ -1,0 +1,4 @@
+#!/bin/bash
+# pipenv run python -m ipykernel install --user --name=pipenv --display-name=pipenv
+
+$@

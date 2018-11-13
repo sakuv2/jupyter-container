@@ -1,0 +1,17 @@
+version: '3'
+services:
+  jupyter-fish:
+    container_name: jupyter
+    image: fish:9
+    hostname: jupyter
+    ports:
+      - 80:8888
+      - 5678:5678
+    volumes:
+      - ~/.jupyter/lab/user-settings:/root/.jupyter/lab/user-settings
+      - ./project:/project
+      # - ~/docker/jupyter/.vimrc:/root/.vimrc
+    command: >
+      jupyter
+      lab
+
